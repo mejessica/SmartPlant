@@ -25,8 +25,8 @@ void seco(){
 }
 
 void umido(){
-	digitalWrite(LED, LOW);
-  	lcd.clear();
+    digitalWrite(LED, LOW);
+    lcd.clear();
     lcd.print("\numidade: ");
     lcd.print("HIDRATADA");
 }
@@ -47,7 +47,7 @@ void loop()
      delay(1000); 
   } 
   else {
-	umido();
+    umido();
   }
   
    delay(1000);

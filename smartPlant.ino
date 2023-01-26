@@ -38,16 +38,21 @@ void loop()
   lcd.print("\numidade: " + nivel_umidade);
   
   
-  if(nivel_umidade < 600){
+  if(nivel_umidade < 500){
+    lcd.display();
     seco();
     
      digitalWrite(motor, HIGH);//rele, valvula, soneloide, bomba
      delay(500);
      digitalWrite(motor, LOW); 
-     delay(1000); 
+     delay(10000); 
   } 
   else {
     umido();
+  }
+  
+   if(nivel_umidade > 800){
+  	lcd.noDisplay();
   }
   
    delay(1000);
